@@ -14,7 +14,7 @@ It is easy to sign up, you should input your email and create password containin
 3. You are able to leave comments after any article.
 4. And if you change mind later, you can delete your comments.
 
-Tools
+Tools.
 For this blog I have had version Ruby 2.6.6, and version Ruby on Rails 5.1. Also I have used gem for registration Devise, gem for including bootstrap and gem for using JQuery. Blog is also deployed on Heroku, here is the link: 
 https://blooming-lowlands-87672.herokuapp.com/articles
 
