@@ -1,0 +1,39 @@
+
+<script>
+  $("#header").html("<h1><%= @category&.name || "All"%> articles</h1>")
+</script>
+
+<% if @category %>
+<script>
+  $("#all_articles").html('&#8592;<%= link_to "All articles", articles_path %>')
+</script>
+<% end %>
+
+<div class="container">
+  <% @articles.each do |article| %>
+  <div class="row">
+  <div class="col-3"></div>
+    <div class="col-6 article ">
+
+    <div style="justify-content: left; display:flex;">
+      <%= link_to article do %>
+        <h3><%= article.title %></h3>
+        <% end %>
+    </div>
+
+      <%= link_to article.category.name, category_articles_path(category_handle: article.category.handle) %>
+      <p><%= article.created_at %></p>
+      <p><%= article.text[0..200]... %></p>
+      <p>Created by <%= article.user.username %></p>
+
+      <% if article.user == current_user %>
+      <%= link_to 'Edit', edit_article_path(article) %> |
+      <%= link_to 'Delete', article_path(article),
+             method: :delete,
+             data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    </div>
+    <div class="col-3"></div>
+</div>
+<% end %>
+</div>

@@ -1,0 +1,20 @@
+@import "bootstrap";
+@import "articles";
+a
+{
+  color:red;
+}
+#header
+{
+  margin-bottom: 0;
+}
+
+.btn
+{
+  width: 30%;
+}
+
+input:not([type=button]):not([type=checkbox]):not([type=submit]):not([type=image]), textarea
+{
+  width: 100%;
+}

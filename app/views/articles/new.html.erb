@@ -1,0 +1,8 @@
+  <script>
+    $("#header").html("<h1>New Article</h1>")
+  </script>
+<%= render 'form' %>
+
+<script>
+  $("#all_articles").html('&#8592;<%= link_to "Back", articles_path %>')
+</script>
